@@ -1,8 +1,8 @@
 package by.naumenka.lesson21;
 
-//Darya,Naumenka,female,19
-//Jaime,Blossom,female,34
 //Max,Winston,male,14
+//Jaime,Blossom,female,34
+//Darya,Naumenka,female,19
 
 import java.io.*;
 import java.util.*;
@@ -32,14 +32,14 @@ public class Main {
             bw.write(person.getFirstName() + separator + person.getLastName() + separator +
                     person.getSex() + separator + person.getAge() + "\n");
         }
+        bw.close();
 
-        ageCount = (int) people.stream().filter(o -> o.getAge() > 30).count();
-        maleCount = (int) people.stream().filter(o -> o.getSex().trim().equals("male")).count();
-        femaleCount = (int) people.stream().filter(o -> o.getSex().trim().equals("female")).count();
-
+        ageCount = (int) people.stream().filter(age -> age.getAge() > 30).count();
         System.out.println();
-        System.out.println("count : " + ageCount);
-        System.out.println("male : " + maleCount);
-        System.out.println("female : " + femaleCount);
+        System.out.println("Люди старше 30 лет : " + ageCount);
+        maleCount = (int) people.stream().filter(male -> male.getSex().trim().equals("male")).count();
+        System.out.println("Мужчин : " + maleCount);
+        femaleCount = (int) people.stream().filter(female -> female.getSex().trim().equals("female")).count();
+        System.out.println("Женщин : " + femaleCount);
     }
 }
