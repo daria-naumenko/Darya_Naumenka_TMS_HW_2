@@ -1,0 +1,3 @@
+Max,Winston,male,14
+Jaime,Blossom,female,34
+Darya,Naumenka,female,19
