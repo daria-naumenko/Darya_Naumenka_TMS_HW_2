@@ -5,13 +5,24 @@ class Document {
     private String creationDate;
     private String nameAuthor;
 
+    public String getDocumentNumber() {
+        return documentNumber;
+    }
 
     public void setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
     }
 
+    public String getCreationDate() {
+        return creationDate;
+    }
+
     public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public String getNameAuthor() {
+        return nameAuthor;
     }
 
     public void setNameAuthor(String nameAuthor) {
